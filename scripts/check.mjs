@@ -11,7 +11,7 @@ const assert = (condition, message) => {
   checks += 1;
   if (!condition) failures.push(message);
 };
-const email = 'eugenekim24730@gmail.com';
+const email = 'byeot93@gmail.com';
 const required = [
   'index.html', 'privacy/index.html', 'terms/index.html', 'support/index.html',
   'en/index.html', 'en/privacy/index.html', 'en/terms/index.html', 'en/support/index.html',
