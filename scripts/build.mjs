@@ -104,8 +104,8 @@ function home(locale) {
       '개인정보 처리 기준과 이용약관을 공개하고, 서비스 문의와 정보 정정 요청을 받는 공식 안내 웹사이트입니다.',
       'This website provides our privacy and service terms, and a contact channel for support and shop-information corrections.') + '</p>' +
     '<p class="small-text">' + text(locale,
-      '개인정보처리방침은 기술 검증 중인 공개 준비본입니다. 해당 문서에서 현재 상태를 확인할 수 있습니다.',
-      'The privacy policy is a preparation draft undergoing technical verification. Its current status is shown on the document.') +
+      '개인정보의 처리 목적과 보유기간, 계정 삭제와 권리 행사 방법을 개인정보처리방침에서 확인할 수 있습니다.',
+      'Read our privacy policy for processing purposes, retention, account deletion and privacy rights.') +
     '</p></section>';
 }
 

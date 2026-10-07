@@ -11,7 +11,7 @@ const assert = (condition, message) => {
   checks += 1;
   if (!condition) failures.push(message);
 };
-const email = 'eugenekim24730@gmail.com';
+const email = 'byeot93@gmail.com';
 const required = [
   'index.html', 'privacy/index.html', 'terms/index.html', 'support/index.html',
   'en/index.html', 'en/privacy/index.html', 'en/terms/index.html', 'en/support/index.html',
@@ -260,11 +260,11 @@ for (const [file, content] of contents) {
       assert(text.includes(document[`releaseNotice${suffix}`]),
         `${file}: legal source release notice must be shown without changes.`);
       if (kind === 'privacy') {
-        assert(document.isDraft === true, `${file}: privacy source metadata must explicitly set isDraft: true.`);
+        assert(typeof document.isDraft === 'boolean', `${file}: privacy source metadata must explicitly set its draft status.`);
         assert(text.includes(source.contacts.privacyOfficerName), `${file}: privacy officer name is missing.`);
       }
     }
-    if (kind === 'privacy') {
+    if (kind === 'privacy' && document?.isDraft) {
       assert(lang === 'ko' ? /초안/.test(text) : /\bdraft\b/i.test(text), `${file}: visible privacy draft notice is missing.`);
       assert(!/(?:현재\s*(?:시행|적용)\s*중|현재\s*시행|now\s+in\s+effect|currently\s+in\s+effect|effective\s+(?:from|as\s+of)\s+\d)/i.test(text),
         `${file}: a draft privacy document must not claim it is currently effective.`);
