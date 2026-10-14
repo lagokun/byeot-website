@@ -235,7 +235,7 @@ for (const [file, content] of contents) {
   `${file}: terms should not include privacy-officer details.`);
 
   if (kind === 'privacy' || kind === 'terms') {
-    const expectedCount = kind === 'privacy' ? 10 : 13;
+    const expectedCount = kind === 'privacy' ? 11 : 13;
     const sections = [...html.matchAll(/<section\b([^>]*)>([\s\S]*?)<\/section>/gi)]
       .filter(match => /(?:^|\s)legal-section(?:\s|$)/.test(attributes(`<section ${match[1]}>`).class ?? ''));
     assert(sections.length === expectedCount, `${file}: expected ${expectedCount} legal sections, found ${sections.length}.`);
